@@ -8,18 +8,25 @@ class AccessDemo {
         System.out.println("Private: " + privateVar);
     }
 
-    public int getPrivateVar() {
-        return privateVar;
-    }
+    //using constructor to access private variable
+     public AccessDemo(int privateVar) {
 
-    public void setPrivateVar(int privateVar) {
         this.privateVar = privateVar;
     }
+
+    // public int getPrivateVar() {
+    //     return privateVar;
+    // }
+
+    // public void setPrivateVar(int privateVar) {
+    //     this.privateVar = privateVar;
+    // }
+
 }
 
 public class ENCAP {
     public static void main(String[] args) {
-        AccessDemo demo = new AccessDemo();
+        AccessDemo demo = new AccessDemo(400);
 
         System.out.println("Public: " + demo.publicVar);
         System.out.println("Protected: " + demo.protectedVar);
