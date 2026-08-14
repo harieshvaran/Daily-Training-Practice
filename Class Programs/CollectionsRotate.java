@@ -10,12 +10,8 @@ public class CollectionsRotate
        		num.add(sc.nextInt());
        }
 
-		int k= sc.nextInt();
-		for(int i=0;i<k;i++)
-		{
-		    int last = num.remove(num.size()-1);
-		    num.add(0,last);
-		}
-		System.out.println("Rotated list : "+ num);
+		  Collections.rotate(num, 1);
+
+		System.out.println(" Rotated list : "+ num);
 	}
 }
